@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:weightSum="3"
+    android:layout_marginStart="75dp"
+    android:layout_marginEnd="75dp">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center">
+
+        <ProgressBar
+            android:id="@+id/progressBarHeartRate"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="350dp"
+            android:layout_height="350dp"
+            android:progressDrawable="@drawable/heart_rate_progress"
+            android:layout_centerInParent="true"
+            android:max="100"
+            android:layout_marginTop="40dp"/>
+
+        <ImageView
+            android:id="@+id/heartImageView"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/heart"
+            android:layout_marginTop="104dp"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/heartRateValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="--"
+            android:textStyle="bold"
+            android:textSize="48sp"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="153dp"/>
+
+        <TextView
+            android:id="@+id/bpmLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/heartRateValue"
+            android:layout_centerHorizontal="true"
+            android:text="BPM"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="0dp"/>
+
+        <TextView
+            android:id="@+id/heartRateLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:textSize="28sp"
+            android:text="Heart Rate"
+            android:layout_marginBottom="100dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_gravity="center">
+
+        <ProgressBar
+            android:id="@+id/progressBarTemperature"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="400dp"
+            android:layout_height="80dp"
+            android:progressDrawable="@drawable/temperature_progress_layer"
+            android:background="@drawable/temperature_progress_background"
+            android:max="100"
+            android:rotation="270"
+            android:layout_centerInParent="true"/>
+
+        <TextView
+            android:id="@+id/temperatureLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/progressBarTemperature"
+            android:layout_marginBottom="135dp"
+            android:layout_centerHorizontal="true"
+            android:text="Temperature"
+            android:textSize="28dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/temperatureValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/temperatureLabel"
+            android:layout_marginBottom="0dp"
+            android:layout_centerHorizontal="true"
+            android:text="--"
+            android:textStyle="bold"
+            android:textSize="32sp"/>
+
+        <TextView
+            android:id="@+id/temperatureUnits"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/temperatureValue"
+            android:layout_marginBottom="10dp"
+            android:layout_centerHorizontal="true"
+            android:text="°F"
+            android:textSize="24sp"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:src="@drawable/home"
+            app:backgroundTint="#D8D8D8"
+            app:fabSize="normal"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center">
+
+        <ProgressBar
+            android:id="@+id/circularProgressBarOxygenSaturation"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="350dp"
+            android:layout_height="350dp"
+            android:progressDrawable="@drawable/circular_progress_bar"
+            android:layout_centerInParent="true"
+            android:max="100"/>
+
+        <ImageView
+            android:id="@+id/bloodImageView"
+            android:layout_width="230dp"
+            android:layout_height="230dp"
+            android:src="@drawable/blood"
+            android:layout_marginTop="72dp"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/bloodOxValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="--"
+            android:textStyle="bold"
+            android:textSize="48sp"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="150dp"/>
+
+        <TextView
+            android:id="@+id/oxygenSaturationLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Oxygen Saturation"
+            android:textStyle="bold"
+            android:textSize="28sp"
+            android:layout_marginBottom="354dp"/>
+    </RelativeLayout>
+</LinearLayout>
